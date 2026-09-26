@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowDownRight, ArrowRight, ArrowUp, ArrowUpRight, BarChart3, Braces, BriefcaseBusiness, Check, ChevronRight, CircleDot, Code2, Compass, Crosshair, ExternalLink, Globe2, GraduationCap, Layout, Mail, MapPin, Menu, Megaphone, Monitor, MousePointer2, PenTool, Phone, Search, ShieldCheck, Sparkles, Target, TrendingUp, X } from "lucide-react";
+import { ArrowDownRight, ArrowUp, ArrowUpRight, BarChart3, Braces, BriefcaseBusiness, Check, ChevronRight, CircleDot, Code2, Compass, Crosshair, ExternalLink, Globe2, GraduationCap, Layout, Mail, Menu, Megaphone, Monitor, MousePointer2, PenTool, Phone, Search, ShieldCheck, Sparkles, Target, TrendingUp, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portrait from "@/assets/keerthana-portrait.jpeg.asset.json";
 
@@ -22,8 +22,8 @@ export const Route = createFileRoute("/")({
 
 const email = "keerthanasureshbabu286@gmail.com";
 const social = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/search/results/people/?keywords=Keerthana%20S", short: "in", title: "Search for Keerthana on LinkedIn" },
-  { label: "GitHub", href: "https://github.com/search?q=Keerthana+S&type=users", short: "gh", title: "Search for Keerthana on GitHub" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/search/results/people/?keywords=Keerthana%20S", short: "in", title: "Find Keerthana on LinkedIn" },
+  { label: "GitHub", href: "https://github.com/search?q=Keerthana+S&type=users", short: "gh", title: "Find Keerthana on GitHub" },
   { label: "Email", href: `mailto:${email}`, short: "@", title: "Email Keerthana" },
 ];
 const nav = [
@@ -84,20 +84,21 @@ function Portfolio() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      const current = [...nav].reverse().find((item) => {
+        const section = document.querySelector(item.href);
+        return section && section.getBoundingClientRect().top < window.innerHeight * 0.58;
+      });
+      if (current) setActive(current.href);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    const sections = nav.map((item) => document.querySelector(item.href)).filter((section): section is Element => Boolean(section));
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible) setActive(`#${visible.target.id}`);
-    }, { rootMargin: "-20% 0px -55% 0px", threshold: [0, 0.25, 0.5] });
-    sections.forEach((section) => observer.observe(section));
     const revealObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
       if (entry.isIntersecting) { entry.target.classList.add("is-visible"); revealObserver.unobserve(entry.target); }
     }), { threshold: 0.08 });
     document.querySelectorAll(".reveal").forEach((node) => revealObserver.observe(node));
-    return () => { window.removeEventListener("scroll", onScroll); observer.disconnect(); revealObserver.disconnect(); };
+    return () => { window.removeEventListener("scroll", onScroll); revealObserver.disconnect(); };
   }, []);
   return <div className="portfolio">
     <header className={`site-header ${scrolled ? "header-compact" : ""}`}>

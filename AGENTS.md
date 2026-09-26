@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the portfolio as a single section-linked index route, because the requested experience is a continuous personal-brand presentation.
+- Keep project data and content in the index route with CSS tokens in the global stylesheet, because this static portfolio needs no backend or persistence.

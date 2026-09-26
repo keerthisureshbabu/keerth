@@ -1,0 +1,3 @@
+- [x] Build the personal-brand portfolio with all requested sections and grounded copy.
+- [x] Add uploaded portrait, responsive navigation, interactions, metadata, and favicon.
+- [x] Verify desktop/mobile layout and links.

@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import portrait from "@/assets/keerthana-portrait.jpeg.asset.json";
+import portrait from "@/assets/keerthana.jpeg";
 
 const email = "keerthanasureshbabu286@gmail.com";
 
@@ -513,7 +513,7 @@ export default function Portfolio() {
 
               <div className="portrait-frame">
                 <img
-                  src={portrait.url}
+                  src={portrait}
                   alt="Keerthana S"
                   fetchPriority="high"
                 />

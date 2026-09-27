@@ -10,4 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Keep the portfolio as a single section-linked index route, because the requested experience is a continuous personal-brand presentation.
-- Keep project data and content in the index route with CSS tokens in the global stylesheet, because this static portfolio needs no backend or persistence.
+- Keep all portfolio content as static data in the index route and visuals in the global stylesheet, because this presentation needs no backend or persistence.
+- Preserve the template's TanStack Start entry and single index route while keeping content entirely client-side, because this project runtime cannot be replaced with a standalone Vite SPA here.

@@ -1,5 +1,5 @@
 - [x] Build the personal-brand portfolio with all requested sections and grounded copy.
 - [x] Add uploaded portrait, responsive navigation, interactions, metadata, and favicon.
 - [x] Verify desktop/mobile layout and links.
-- [ ] Redesign the complete portfolio with a premium dark-blue technology visual system and subtle motion.
-- [ ] Verify the new desktop and mobile experience, links, portrait, and reduced-motion behavior.
+- [x] Redesign the complete portfolio with a premium dark-blue technology visual system and subtle motion.
+- [x] Verify the new desktop and mobile experience, links, portrait, and reduced-motion behavior.

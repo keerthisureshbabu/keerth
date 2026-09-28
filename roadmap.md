@@ -3,3 +3,5 @@
 - [x] Verify desktop/mobile layout and links.
 - [x] Redesign the complete portfolio with a premium dark-blue technology visual system and subtle motion.
 - [x] Verify the new desktop and mobile experience, links, portrait, and reduced-motion behavior.
+- [ ] Convert the project from TanStack Start to a pure React + Vite static SPA without changing the portfolio.
+- [ ] Validate the production build and GitHub Pages `/keerth/` asset paths on desktop and mobile.

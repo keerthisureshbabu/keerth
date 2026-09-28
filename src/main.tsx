@@ -3,7 +3,13 @@ import ReactDOM from "react-dom/client";
 import Portfolio from "./routes/index";
 import "./styles.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+
+if (!rootElement) {
+  throw new Error("Portfolio root element was not found.");
+}
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <Portfolio />
   </React.StrictMode>

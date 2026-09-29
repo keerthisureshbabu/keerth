@@ -11,4 +11,4 @@
 
 - Keep the portfolio as a single section-linked index route, because the requested experience is a continuous personal-brand presentation.
 - Keep all portfolio content as static data in the index route and visuals in the global stylesheet, because this presentation needs no backend or persistence.
-- Use a direct React + Vite static SPA entry with no router or server runtime, because the portfolio must deploy unchanged under the GitHub Pages `/keerth/` base path.
+- Use a direct React + Vite static SPA entry with no router or server runtime and relative build assets, because the portfolio must work both at host roots and under GitHub Pages `/keerth/`.

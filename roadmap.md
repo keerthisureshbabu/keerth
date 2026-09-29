@@ -5,3 +5,4 @@
 - [x] Verify the new desktop and mobile experience, links, portrait, and reduced-motion behavior.
 - [x] Convert the project from TanStack Start to a pure React + Vite static SPA without changing the portfolio.
 - [x] Validate the build signal and `/keerth/` asset paths on desktop and mobile.
+- [x] Fix the blank screen on root-hosted previews while retaining GitHub Pages `/keerth/` compatibility.

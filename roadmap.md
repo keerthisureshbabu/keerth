@@ -6,5 +6,5 @@
 - [x] Convert the project from TanStack Start to a pure React + Vite static SPA without changing the portfolio.
 - [x] Validate the build signal and `/keerth/` asset paths on desktop and mobile.
 - [x] Fix the blank screen on root-hosted previews while retaining GitHub Pages `/keerth/` compatibility.
-- [ ] Update Creative skills and remove the three specified selected projects; update Team Bee Studio's URL.
-- [ ] Replace remaining project card artwork with the supplied matching website screenshots and verify on desktop/mobile.
+- [x] Update Creative skills and remove the three specified selected projects; update Team Bee Studio's URL.
+- [x] Replace remaining project card artwork with the supplied matching website screenshots and verify on desktop/mobile.

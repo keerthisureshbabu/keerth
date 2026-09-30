@@ -25,13 +25,13 @@ import {
 
 import { Button } from "@/components/ui/button";
 import portrait from "@/assets/keerthana.jpeg";
-import edventuresImage from "@/assets/projects/edventures.webp.asset.json";
-import navgraamImage from "@/assets/projects/navgraam.webp.asset.json";
-import trymywebsitesImage from "@/assets/projects/trymywebsites.webp.asset.json";
-import smartgptImage from "@/assets/projects/smartgpt.webp.asset.json";
-import goldarkImage from "@/assets/projects/goldark.webp.asset.json";
-import mearkHrImage from "@/assets/projects/meark-hr.webp.asset.json";
-import teambeeImage from "@/assets/projects/teambee.webp.asset.json";
+import edventuresImage from "@/assets/projects/edventures.webp";
+import navgraamImage from "@/assets/projects/navgraam.webp";
+import trymywebsitesImage from "@/assets/projects/trymywebsites.webp";
+import smartgptImage from "@/assets/projects/smartgpt.webp";
+import goldarkImage from "@/assets/projects/goldark.webp";
+import mearkHrImage from "@/assets/projects/meark-hr.webp";
+import teambeeImage from "@/assets/projects/teambee.webp";
 
 const email = "keerthanasureshbabu286@gmail.com";
 
@@ -159,43 +159,43 @@ const projects = [
     name: "Edventures Technology",
     category: "Technology / Website",
     url: "https://edventurestechnology.com/",
-    image: edventuresImage.url,
+    image: edventuresImage,
   },
   {
     name: "Navgraam",
     category: "Business Website",
     url: "https://navgraam.in/",
-    image: navgraamImage.url,
+    image: navgraamImage,
   },
   {
     name: "TRYMYWEBSITES",
     category: "Web Development",
     url: "https://trymywebsites.com/",
-    image: trymywebsitesImage.url,
+    image: trymywebsitesImage,
   },
   {
     name: "SmartGPT",
     category: "Digital Marketing & Technology",
     url: "https://smartgpt.com.au/",
-    image: smartgptImage.url,
+    image: smartgptImage,
   },
   {
     name: "GoldArk",
     category: "Gold Scheme Management Platform",
     url: "https://goldark.meark.org/",
-    image: goldarkImage.url,
+    image: goldarkImage,
   },
   {
     name: "Meark HR Services",
     category: "HR / Recruitment",
     url: "https://hr.meark.org/",
-    image: mearkHrImage.url,
+    image: mearkHrImage,
   },
   {
     name: "Team Bee Studio",
     category: "React + Vite",
     url: "https://teambeestudios.com/",
-    image: teambeeImage.url,
+    image: teambeeImage,
   },
 ];
 

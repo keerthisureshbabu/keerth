@@ -5,8 +5,6 @@ import {
   ArrowUp,
   ArrowUpRight,
   BarChart3,
-  Braces,
-  BriefcaseBusiness,
   Check,
   Code2,
   Crosshair,
@@ -22,12 +20,18 @@ import {
   Search,
   Sparkles,
   Target,
-  TrendingUp,
   X,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import portrait from "@/assets/keerthana.jpeg";
+import edventuresImage from "@/assets/projects/edventures.webp";
+import navgraamImage from "@/assets/projects/navgraam.webp";
+import trymywebsitesImage from "@/assets/projects/trymywebsites.webp";
+import smartgptImage from "@/assets/projects/smartgpt.webp";
+import goldarkImage from "@/assets/projects/goldark.webp";
+import mearkHrImage from "@/assets/projects/meark-hr.webp";
+import teambeeImage from "@/assets/projects/teambee.webp";
 
 const email = "keerthanasureshbabu286@gmail.com";
 
@@ -113,14 +117,7 @@ const skills = [
     icon: PenTool,
     name: "Creative",
     index: "04",
-    items: [
-      "Figma",
-      "Photoshop",
-      "CapCut",
-      "DaVinci Resolve",
-      "Poster Design",
-      "Creative Content",
-    ],
+    items: ["Poster Designing", "Canva", "Figma", "CapCut"],
   },
 ];
 
@@ -162,71 +159,43 @@ const projects = [
     name: "Edventures Technology",
     category: "Technology / Website",
     url: "https://edventurestechnology.com/",
-    icon: Layout,
-    code: "EDV",
-  },
-  {
-    name: "JeevaRaksha",
-    category: "Healthcare / Organization Website",
-    url: "https://jeevaraksha.org/",
-    icon: Crosshair,
-    code: "JVR",
+    image: edventuresImage,
   },
   {
     name: "Navgraam",
     category: "Business Website",
     url: "https://navgraam.in/",
-    icon: Globe2,
-    code: "NVG",
+    image: navgraamImage,
   },
   {
     name: "TRYMYWEBSITES",
     category: "Web Development",
     url: "https://trymywebsites.com/",
-    icon: Code2,
-    code: "TMW",
-  },
-  {
-    name: "Smaart Eye Technologies",
-    category: "Security Technology",
-    url: "https://smaarteyetechnologies.com/",
-    icon: Crosshair,
-    code: "SET",
+    image: trymywebsitesImage,
   },
   {
     name: "SmartGPT",
     category: "Digital Marketing & Technology",
     url: "https://smartgpt.com.au/",
-    icon: Sparkles,
-    code: "SGP",
+    image: smartgptImage,
   },
   {
     name: "GoldArk",
     category: "Gold Scheme Management Platform",
     url: "https://goldark.meark.org/",
-    icon: TrendingUp,
-    code: "GLD",
+    image: goldarkImage,
   },
   {
     name: "Meark HR Services",
     category: "HR / Recruitment",
     url: "https://hr.meark.org/",
-    icon: BriefcaseBusiness,
-    code: "MHR",
+    image: mearkHrImage,
   },
   {
-    name: "TeamBee Studio",
+    name: "Team Bee Studio",
     category: "React + Vite",
-    url: "https://mearkwebdev.github.io/teambeestudio/",
-    icon: Braces,
-    code: "TBS",
-  },
-  {
-    name: "GrmElitewear",
-    category: "E-commerce / Web Development",
-    url: null,
-    icon: Layout,
-    code: "GRM",
+    url: "https://teambeestudios.com/",
+    image: teambeeImage,
   },
 ];
 
@@ -773,16 +742,7 @@ export default function Portfolio() {
 
             <div className="projects-grid">
               {projects.map(
-                (
-                  {
-                    name,
-                    category,
-                    url,
-                    icon: Icon,
-                    code,
-                  },
-                  i
-                ) => (
+                ({ name, category, url, image }, i) => (
                   <article
                     className="project-card reveal"
                     key={name}
@@ -803,40 +763,16 @@ export default function Portfolio() {
                         <span>↗</span>
                       </div>
 
-                      <div className="preview-rings" />
-
                       <div className="preview-window">
                         <div className="window-bar">
                           <span />
                           <span />
                           <span />
 
-                          <i>
-                            preview /{" "}
-                            {code.toLowerCase()}
-                          </i>
+                          <i>{new URL(url).hostname}</i>
                         </div>
 
-                        <div className="window-body">
-                          <div className="window-icon">
-                            <Icon
-                              size={24}
-                              strokeWidth={1.4}
-                            />
-                          </div>
-
-                          <span className="window-code">
-                            {code}
-                          </span>
-
-                          <div className="window-lines">
-                            <span />
-                            <span />
-                            <span />
-                          </div>
-
-                          <div className="window-pill" />
-                        </div>
+                        <img src={image} alt="" loading="lazy" decoding="async" />
                       </div>
 
                       <span className="preview-coordinate">
@@ -856,28 +792,21 @@ export default function Portfolio() {
                       <h3>{name}</h3>
 
                       <div className="project-bottom">
-                        {url ? (
-                          <a
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            View Project
-                            <ExternalLink size={16} />
-                          </a>
-                        ) : (
-                          <span className="ongoing">
-                            <span className="caption-dot" />
-                            Ongoing Project
-                          </span>
-                        )}
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                          <ExternalLink size={16} />
+                        </a>
 
                         <span>
                           {String(i + 1).padStart(
                             2,
                             "0"
                           )}{" "}
-                          / 10
+                          / {String(projects.length).padStart(2, "0")}
                         </span>
                       </div>
                     </div>
